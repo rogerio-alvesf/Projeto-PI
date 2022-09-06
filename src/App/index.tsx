@@ -1,8 +1,12 @@
 import react from 'react';
 
+import Templates from './Templates';
+
 const App = () => {
   return (
-    <h1>Projeto PI - Grupo07</h1>
+    <Templates>
+      <h1>Projeto PI - Grupo07</h1>
+    </Templates>
   )
 };
 
