@@ -2,12 +2,11 @@ import { Theme } from "@mui/material";
 
 const useStyles = () => ({
     header: {
-        width: "100%",
-        height: "12vh",
         boxShadow: "0px 4px 3px 0px rgba(0, 0, 0, 0.25)",
+        backgroundColor: "#fff",
     },
     imgLogo: {
-        height: "35%",
+        height: "90%",
     },
     campoBusca: {
         paddingTop: "1rem",
@@ -25,6 +24,9 @@ const useStyles = () => ({
     },
     iconeConta: {
         color: "#000",
+    },
+    imgLogoContainer: {
+        height: "12vh"
     },
 });
 
