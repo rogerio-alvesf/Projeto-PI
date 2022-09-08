@@ -16,6 +16,17 @@ import Menu from "./Menu";
 const Header = () => {
   const styles = useStyles();
 
+  const [openMenu, setOpenMenu] = useState<boolean>(false);
+
+  const handleCloseMenu = () => {
+    setOpenMenu(false);
+  };
+
+  const handleOpenMenu = () => {
+    setOpenMenu(true);
+    console.log("Abriu");
+  };
+
   return (
     <AppBar sx={styles.header} position="static">
       <Toolbar>
@@ -44,9 +55,10 @@ const Header = () => {
             <Button sx={styles.botao}>Início</Button>
             <Button sx={styles.botao}>Sobre</Button>
             <Button sx={styles.botao}>Ajuda</Button>
-            <IconButton size="large" sx={styles.iconeConta}>
-              <AccountCircleOutlined fontSize="inherit" />
+            <IconButton size="large" sx={styles.iconeConta} onClick={handleOpenMenu} >
+              <AccountCircleOutlined fontSize="inherit"/>
             </IconButton>
+            <Menu handleOpenMenu={handleOpenMenu} handleCloseMenu={handleCloseMenu} openMenu={openMenu} />
           </Grid>
         </Grid>
       </Toolbar>
