@@ -1,7 +1,5 @@
 import React from "react";
 
-import Box from "@mui/material/Box";
-
 import Header from "./Components/Header";
 
 type TemplateProps = {
@@ -9,6 +7,7 @@ type TemplateProps = {
 };
 
 const Templates = ({ children }: TemplateProps) => {
+
   return (
     <>
       <Header />

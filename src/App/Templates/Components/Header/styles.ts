@@ -1,4 +1,4 @@
-import { Theme, useTheme } from "@mui/material";
+import { Theme } from "@mui/material";
 
 
 const useStyles = () => ({
@@ -8,25 +8,25 @@ const useStyles = () => ({
         padding: (theme: Theme) => theme.spacing(0,2,0,2),
     },
     imgLogo: {
-        height: "90%",
+        height: (theme: Theme) => theme.spacing(5.5),
         paddingTop: (theme: Theme) => theme.spacing(1),
     },
     opcoes: {
         display: "flex",
         justifyContent: "flex-end",
         alignitems: "center",
-        paddingTop: (theme: Theme) => theme.spacing(1),
+        marginTop: (theme: Theme) => theme.spacing(2),
+        marginBottom: (theme: Theme) => theme.spacing(2),
     },
     botao: {
         textTransform: "none",
         color: "#000",
         fontWeight: "bold",
+        height: (theme: Theme) => theme.spacing(5.5),
     },
     iconeConta: {
         color: "#000",
-    },
-    imgLogoContainer: {
-        height: "12vh",
+        height: (theme: Theme) => theme.spacing(5.5),
     },
 });
 
