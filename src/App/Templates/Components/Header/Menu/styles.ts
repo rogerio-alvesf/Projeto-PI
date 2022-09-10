@@ -4,8 +4,8 @@ const useStyles = () => ({
     closeButton: {
         display: 'flex',
         justifyContent: 'flex-start',
-        paddingLeft: '2rem',
-        paddingTop: '1.5rem',
+        paddingLeft: (theme: Theme) => theme.spacing(3),
+        paddingTop: (theme: Theme) => theme.spacing(3),
     },
     root: {
         backgroundColor: "#0C8FF2",

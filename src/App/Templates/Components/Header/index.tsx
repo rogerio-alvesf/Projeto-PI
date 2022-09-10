@@ -10,6 +10,7 @@ import Toolbar from "@mui/material/Toolbar";
 
 import BuscaImovel from "./BuscaImovel";
 import Logo from "../../../../Images/logo-espaco-aberto.png";
+import Tooltip from "@mui/material/Tooltip";
 import useStyles from "./styles";
 import Menu from "./Menu";
 
@@ -34,6 +35,7 @@ const Header = () => {
           <Grid
             item
             md={2}
+            sm={0}
             xs={0}
             paddingBottom={1}
             paddingTop={1}
@@ -48,17 +50,33 @@ const Header = () => {
               alt="Logo Espaço Aberto"
             />
           </Grid>
-          <Grid item md={3.5} xs={12} sx={styles.campoBusca}>
+          <Grid item md={3.5} xs={12}>
             <BuscaImovel />
           </Grid>
-          <Grid item xs={0} md={6.5} sx={styles.opcoes} flex={1} gap={8}>
-            <Button sx={styles.botao}>Início</Button>
-            <Button sx={styles.botao}>Sobre</Button>
-            <Button sx={styles.botao}>Ajuda</Button>
-            <IconButton size="large" sx={styles.iconeConta} onClick={handleOpenMenu} >
-              <AccountCircleOutlined fontSize="inherit"/>
-            </IconButton>
-            <Menu handleOpenMenu={handleOpenMenu} handleCloseMenu={handleCloseMenu} openMenu={openMenu} />
+          <Grid item xs={12} md={6.5} sx={styles.opcoes} flex={1} gap={7}>
+            <Tooltip title="Início">
+              <Button sx={styles.botao}>Início</Button>
+            </Tooltip>
+            <Tooltip title="Sobre">
+              <Button sx={styles.botao}>Sobre</Button>
+            </Tooltip>
+            <Tooltip title="Ajuda">
+              <Button sx={styles.botao}>Ajuda</Button>
+            </Tooltip>
+            <Tooltip title="Icon" placement="top-start">
+              <IconButton
+                size="large"
+                sx={styles.iconeConta}
+                onClick={handleOpenMenu}
+              >
+                <AccountCircleOutlined fontSize="inherit" />
+              </IconButton>
+            </Tooltip>
+            <Menu
+              handleOpenMenu={handleOpenMenu}
+              handleCloseMenu={handleCloseMenu}
+              openMenu={openMenu}
+            />
           </Grid>
         </Grid>
       </Toolbar>
